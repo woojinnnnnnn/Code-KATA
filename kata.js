@@ -81,3 +81,110 @@ for (let i = 0; i <= n; i++) {
 return answer;
 }
 //----------------------------------------------------------------------
+// 배열의 평균값
+// 넘버스의 원소의 평균값 retrun
+function solution(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i]
+    }
+    let answer = sum / numbers.length;
+    return answer
+    console.log(answer)
+}
+//----------------------------------------------------------------------
+//짝수와 홀수
+// 정수 넘 짝수면 이븐, 홀수 오드 -> retrun
+function solution(num) {
+    var answer = '';
+    if (num % 2 === 0) {
+        return answer = "Even"
+    } else {
+        return answer = "Odd"
+    }
+    return answer;
+}
+//----------------------------------------------------------------------
+// 평균 구허가.
+// 정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.
+function solution(arr) {
+    var answer = 0;
+    for (let i = 0; i < arr.length; i++){
+        answer += arr[i]
+    }
+    return answer / arr.length;
+}
+//----------------------------------------------------------------------
+// 자릿수 더하기
+function solution(n) {
+    var answer = 0;
+    let str = String(n)
+    
+    for (let i = 0; i < str.length; i++){
+        answer += parseInt(str[i])
+    }
+    return answer;
+}
+//----------------------------------------------------------------------
+// 약수의 합.
+function solution(n) {
+    var answer = 0;
+    for ( let i = 0; i <= n; i++){
+        console.log(i)
+        // if( n % i === 0){
+        //     answer += i
+        // }
+    }
+    return answer;
+}
+//----------------------------------------------------------------------
+// 나머지가 1이 되는 수 찾기.
+function solution(n) {
+    // var answer = 0;
+    let result = []
+
+    for (let i = 0; i < n; i++){
+    if ( n % i === 1) {
+       result.push(i)  
+    } 
+}
+    return result[0]
+}
+//----------------------------------------------------------------------
+// x만큼 간격이 있는 n개의 숫자
+function solution(x, n) {
+    var answer = [];
+    for(let i = 1; i <= n; i++) {
+        answer.push(i * x)
+    }
+    return answer;
+}
+//----------------------------------------------------------------------
+// 자연수 뒤집어 배열로 만들기.
+function solution(n) {
+    var arr = n.toString().split('');
+    var answer = [];
+
+    for(var i=arr.length-1; i>=0; i--){
+        answer.push(Number(arr[i]));
+    }
+
+  return answer;
+}
+//----------------------------------------------------------------------
+// 문자열 정수로 바꾸기/
+function solution(s) {
+    var answer = 0;
+    let a = Number(s)
+    return answer = a
+}
+//----------------------------------------------------------------------
+//정수 내림차순으로 배치하기.
+function solution(n) {
+    var answer = 0;
+    n=String(n)
+    n=n.split('')
+    n=n.sort((a,b)=>b-a).join('')
+    n=Number(n)
+    return n;
+}
