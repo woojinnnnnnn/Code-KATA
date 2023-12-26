@@ -188,3 +188,32 @@ function solution(n) {
     n=Number(n)
     return n;
 }
+//----------------------------------------------------------------------
+//두 정수 사이의 합
+function solution(a, b) {
+    var answer = 0;
+    if (a >= b){
+        for ( let i = b; i <= a; i++){
+            answer = answer +=i;
+        }
+    } else if (a < b){
+        for( let i = a; i <= b; i++){
+            answer = answer += i
+        }
+    }
+    return answer;
+}
+//----------------------------------------------------------------------
+// 음양 더하기
+function solution(absolutes, signs) {
+    let answer = 0;
+    console.log(absolutes.length)
+    for (let i = 0; i < absolutes.length; i++) {
+        if (signs[i] === true) {
+            answer = answer + absolutes[i];
+        } else {
+            answer = answer - absolutes[i];
+        }
+    }
+    return answer
+}
