@@ -217,3 +217,34 @@ function solution(absolutes, signs) {
     }
     return answer
 }
+//----------------------------------------------------------------------
+// 콜라츠 추측
+function solution(num) {
+    let answer = 0;
+    
+    while (num != 1) {
+        if (num % 2 == 0){
+            num /= 2;
+        } else {
+            num = (num * 3) + 1;
+        }
+        answer += 1;
+    }
+    if (answer >= 500) {
+        return -1;
+    } else {
+        return answer;
+    }
+}
+//----------------------------------------------------------------------
+// 하샤드 수
+function solution(x) {
+    let sum = 0;
+    let arr = String(x).split("");
+
+    for(let i = 0; i < arr.length; i++){
+        sum += Number(arr[i]);
+    }
+
+    return (x % sum == 0) ? true : false;
+}
