@@ -248,3 +248,25 @@ function solution(x) {
 
     return (x % sum == 0) ? true : false;
 }
+//----------------------------------------------------------------------
+// 나누어 떨어지는 숫자,
+function solution(arr, divisor) {
+    var answer = [];
+    for(i=0; i<arr.length; i++) {
+      if(arr[i] % divisor == 0) {
+        answer.push(arr[i]);
+      }
+    }
+    if(answer.length == 0) {
+      answer.push(-1);
+    }
+    answer.sort((a,b) => a - b);
+    return answer;
+}
+//----------------------------------------------------------------------
+// 서울에서 김 서방 찾기.
+function solution(seoul) {
+    for (let i = 0; i < seoul.length; i++) {
+        if (seoul[i] === 'Kim') return `김서방은 ${i}에 있다`
+    }
+}
