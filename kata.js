@@ -270,3 +270,19 @@ function solution(seoul) {
         if (seoul[i] === 'Kim') return `김서방은 ${i}에 있다`
     }
 }
+//----------------------------------------------------------------------
+// 휴대폰 번호 가리기
+function solution(phone_number) {
+    var answer = '';
+    answer = phone_number.slice(0,-4).replace(/[0-9]/g,'*') + phone_number.slice(-4);
+return answer;
+}
+//----------------------------------------------------------------------
+//없는 숫자 더하기
+function solution(numbers) {
+    var answer = 0;
+    for(let i=0; i<10; i++){
+        if(!numbers.includes(i)) answer += i; // numbers가 i를 포함하지 않는다면, answer에 그 i 값들을 더해라
+    } 
+    return answer;
+}
