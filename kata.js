@@ -307,4 +307,27 @@ function solution(s) {
         return s.substr(s.length/2,1)
     }   
 }
-
+//----------------------------------------------------------------------
+// 약수의 개수와 덧셈 // 코드를 제대로 이해하지 못함 다시 볼 것.
+function solution(left, right) {
+    let answer = 0;
+    for (let i = left; i <= right; i++) {
+        let p = 1;
+    for (j = 2; j <= i; j++) {
+        if (i % j == 0) p++;
+    }
+        if (p % 2 == 0) answer += i;
+        else answer -= i;
+    }
+        return answer;
+}
+//----------------------------------------------------------------------
+// 수박 수박 수박 수박 
+function solution(n) {
+    var answer = '';
+    for (let i = 1; i <= n; i++) {
+        i % 2 === 0 ? answer += '박' : answer += '수'
+    }
+    return answer;
+}
+//
