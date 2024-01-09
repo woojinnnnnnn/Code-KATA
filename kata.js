@@ -351,3 +351,33 @@ function solution(s) {
 // 문자열의 길이가 4 혹은 6 숫자로만 구성이 되어있는지.
 // s = 'a234' 라면 false.
 // '1234' 라면 true.
+
+//----------------------------------------------------------------------
+// 이상한 문자 다루기.
+// 문자열을 띄어쓰기 기준으로 단어를 끊어서 받은 뒤
+// 그 단어를 짝수 번째 문자는 대문자, 홀수는 소문자, 다시 문장으로 리턴.
+function solution(s) {
+    let answer = '';
+    let words = s.split(" "); // s 를 " " 기준으로 split 메소드를 사용해 분리.
+    for(let i = 0; i<words.length; i++){ // 반복문을 사용해 words.length 길이 만큼.
+        for(let j = 0; j<words[i].length; j++){ // 이중 반복문 사용.. words의[i] 길이.
+        if(j % 2 == 0) { // j 를 나누었을때 짝수 라면 ?
+        answer += words[i][j].toUpperCase();
+        // words 의 [i]번째 배열의 [j] 번째 문자열을 대문자로 변환 후 answer 에 더하기.
+        } else {
+        answer += words[i][j].toLowerCase()}
+        // words 의 [i]번째 배열의 [j] 번째 문자열을 소문자로 뱐환 후 answer 에 더하기.
+        }
+        // i 는 0 부터 시작, try[0],hello[1],world[2]
+        // words.length는 1부터 시작함. try[1],hello[2],world[3] -> try hellow world ->
+        // words.length: 3.
+        // 조건문을 만들어 공백을 생성하고, 조건에 마지막 i 번째 배열을 조건에서 제외.
+        if(!(i==words.length-1)){
+            answer+=" ";
+    }
+}
+return answer;
+}
+// 20분 스스로 고민 하다 구글링을 통해서 조금 더 찾아본 결과 코드에 대해서 완벽히 이해를 하지
+// 못했기에 더 공부 해야함.
+//----------------------------------------------------------------------
